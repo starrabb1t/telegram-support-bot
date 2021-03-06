@@ -1,8 +1,4 @@
 import os
-from dotenv import load_dotenv, find_dotenv
-
-# Loading .env variables
-load_dotenv(find_dotenv())
 
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 if TELEGRAM_TOKEN is None:
