@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from telegram.ext import Updater
 
 from handlers import setup_dispatcher
