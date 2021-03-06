@@ -1,8 +1,8 @@
 FROM python:3.8-slim-buster
-WORKDIR /
-COPY main.py /
-COPY handlers.py /
-COPY settings.py /
+WORKDIR /opt/app
+COPY main.py /opt/app/
+COPY handlers.py /opt/app/
+COPY settings.py /opt/app/
 RUN pip3 install python-telegram-bot==13.3 &&\
-    chmod -R 777 /opt/app/ *
-ENTRYPOINT [ "/main.py" ]
+    chmod -R 777 /opt/app/ *.py
+ENTRYPOINT [ "/opt/app/main.py" ]
